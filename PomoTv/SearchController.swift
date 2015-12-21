@@ -9,10 +9,10 @@
 import UIKit
 import MWFeedParser
 import SegueManager
+import ElementDiff
 
 class SearchController: UIViewController {
 
-  var allItems: [TalkCollectionViewCell.ViewModel] = []
   var items: [TalkCollectionViewCell.ViewModel] = []
 
   lazy var segueManager: SegueManager = { SegueManager(viewController: self) }()
@@ -33,13 +33,6 @@ class SearchController: UIViewController {
     // How should this be done with AutoLayout/Interface builder?
     collectionView.scrollIndicatorInsets.top += searchBar.frame.height
     collectionView.contentInset.top += searchBar.frame.height
-
-    Api().fetchRecents { [weak self] feedItems in
-      let items = feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
-      self?.allItems = items
-      self?.items = items
-      self?.collectionView?.reloadData()
-    }
   }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -50,14 +43,20 @@ class SearchController: UIViewController {
 extension SearchController : UISearchBarDelegate {
 
   func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-    // Dummy search, while there's no API
-    if searchText.isEmpty {
-      self.items = allItems
+
+    // Fake search, while there's no API
+    Api().fetchRecents { [weak self] feedItems in
+      guard let controller = self else { return }
+
+      let allItems = feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
+      let newItems = allItems.filter { vm in vm.title.lowercaseString.containsString(searchText.lowercaseString) }
+      let diff = controller.items.diff(newItems)
+
+      controller.collectionView.performBatchUpdates({
+        controller.items = newItems
+        controller.collectionView.updateSection(0, diff: diff)
+      }, completion: nil)
     }
-    else {
-      self.items = allItems.filter { vm in vm.title.lowercaseString.containsString(searchText.lowercaseString) }
-    }
-    self.collectionView.reloadData()
   }
 }
 
