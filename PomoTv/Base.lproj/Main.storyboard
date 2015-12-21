@@ -10,7 +10,7 @@
         <!--POMO.tv-->
         <scene sceneID="YgG-Rr-htS">
             <objects>
-                <collectionViewController id="KSZ-vP-odW" customClass="RecentController" customModule="PomoTv" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="KSZ-vP-odW" customClass="RecentsController" customModule="PomoTv" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="TalkCollectionViewCell" dataMode="prototypes" id="1cI-o1-r5R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="1562" y="-320"/>
         </scene>
-        <!--Talk View Controller-->
+        <!--Talk Controller-->
         <scene sceneID="iuy-eC-U2q">
             <objects>
-                <viewController id="mHN-o5-8qX" customClass="TalkViewController" customModule="PomoTv" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mHN-o5-8qX" customClass="TalkController" customModule="PomoTv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TfD-gq-qix"/>
                         <viewControllerLayoutGuide type="bottom" id="dtv-4Z-Scl"/>
@@ -207,39 +207,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiC-xq-iDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="Ywf-ro-gC5">
-            <objects>
-                <collectionViewController id="W27-aj-e5t" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vxP-Or-pDB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lQb-zq-gbv">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aT6-wb-lsE">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="W27-aj-e5t" id="Yid-EV-mrl"/>
-                            <outlet property="delegate" destination="W27-aj-e5t" id="C92-cc-std"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fH5-Za-M7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>

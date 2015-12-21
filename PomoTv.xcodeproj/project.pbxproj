@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E27854951C26CC8A003F2C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854941C26CC8A003F2C19 /* AppDelegate.swift */; };
-		E27854971C26CC8A003F2C19 /* RecentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854961C26CC8A003F2C19 /* RecentController.swift */; };
+		E27854971C26CC8A003F2C19 /* RecentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854961C26CC8A003F2C19 /* RecentsController.swift */; };
 		E27854991C26CC8A003F2C19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854981C26CC8A003F2C19 /* AboutViewController.swift */; };
 		E278549C1C26CC8A003F2C19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E278549A1C26CC8A003F2C19 /* Main.storyboard */; };
 		E278549E1C26CC8A003F2C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E278549D1C26CC8A003F2C19 /* Assets.xcassets */; };
 		E27854A11C26CC8A003F2C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E278549F1C26CC8A003F2C19 /* LaunchScreen.storyboard */; };
 		E27854A91C26D7DB003F2C19 /* UIColor+Pomo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */; };
 		E27854AC1C28048C003F2C19 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AB1C28048C003F2C19 /* R.generated.swift */; };
-		E27854AE1C281F38003F2C19 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AD1C281F38003F2C19 /* TalkViewController.swift */; };
+		E27854AE1C281F38003F2C19 /* TalkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AD1C281F38003F2C19 /* TalkController.swift */; };
 		E27854B01C284EC5003F2C19 /* TalkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */; };
 		E27854B21C2850FD003F2C19 /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */; };
 		FEBF752182DCCB8780E29BC1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC24EC47D4DE24CFD71A8D1B /* Pods.framework */; };
@@ -25,7 +25,7 @@
 		2790F83A1E5380B4C3F0F834 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E27854911C26CC8A003F2C19 /* PomoTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomoTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27854941C26CC8A003F2C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E27854961C26CC8A003F2C19 /* RecentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentController.swift; sourceTree = "<group>"; };
+		E27854961C26CC8A003F2C19 /* RecentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsController.swift; sourceTree = "<group>"; };
 		E27854981C26CC8A003F2C19 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E278549B1C26CC8A003F2C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E278549D1C26CC8A003F2C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 		E27854A21C26CC8A003F2C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Pomo.swift"; sourceTree = "<group>"; };
 		E27854AB1C28048C003F2C19 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		E27854AD1C281F38003F2C19 /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
+		E27854AD1C281F38003F2C19 /* TalkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkController.swift; sourceTree = "<group>"; };
 		E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkCollectionViewCell.xib; sourceTree = "<group>"; };
 		E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAADF6EF940A12AE88856F16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,20 +90,68 @@
 		E27854931C26CC8A003F2C19 /* PomoTv */ = {
 			isa = PBXGroup;
 			children = (
-				E27854981C26CC8A003F2C19 /* AboutViewController.swift */,
 				E27854941C26CC8A003F2C19 /* AppDelegate.swift */,
+				E2F2BE8C1C286F4400ACFD6C /* Extensions */,
+				E2F2BE8B1C286F2500ACFD6C /* Features */,
+				E2F2BE8A1C286F0100ACFD6C /* Resources */,
+			);
+			path = PomoTv;
+			sourceTree = "<group>";
+		};
+		E2F2BE8A1C286F0100ACFD6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				E278549D1C26CC8A003F2C19 /* Assets.xcassets */,
 				E27854A21C26CC8A003F2C19 /* Info.plist */,
 				E278549F1C26CC8A003F2C19 /* LaunchScreen.storyboard */,
-				E278549A1C26CC8A003F2C19 /* Main.storyboard */,
 				E27854AB1C28048C003F2C19 /* R.generated.swift */,
-				E27854961C26CC8A003F2C19 /* RecentController.swift */,
-				E27854AD1C281F38003F2C19 /* TalkViewController.swift */,
-				E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */,
-				E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */,
-				E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */,
 			);
-			path = PomoTv;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E2F2BE8B1C286F2500ACFD6C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E278549A1C26CC8A003F2C19 /* Main.storyboard */,
+				E2F2BE8D1C28731200ACFD6C /* About */,
+				E2F2BE8E1C28731C00ACFD6C /* Recents */,
+				E2F2BE8F1C28734D00ACFD6C /* Talk */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		E2F2BE8C1C286F4400ACFD6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E2F2BE8D1C28731200ACFD6C /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E27854981C26CC8A003F2C19 /* AboutViewController.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		E2F2BE8E1C28731C00ACFD6C /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				E27854961C26CC8A003F2C19 /* RecentsController.swift */,
+				E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */,
+				E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */,
+			);
+			name = Recents;
+			sourceTree = "<group>";
+		};
+		E2F2BE8F1C28734D00ACFD6C /* Talk */ = {
+			isa = PBXGroup;
+			children = (
+				E27854AD1C281F38003F2C19 /* TalkController.swift */,
+			);
+			name = Talk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +296,8 @@
 				E27854991C26CC8A003F2C19 /* AboutViewController.swift in Sources */,
 				E27854951C26CC8A003F2C19 /* AppDelegate.swift in Sources */,
 				E27854AC1C28048C003F2C19 /* R.generated.swift in Sources */,
-				E27854971C26CC8A003F2C19 /* RecentController.swift in Sources */,
-				E27854AE1C281F38003F2C19 /* TalkViewController.swift in Sources */,
+				E27854971C26CC8A003F2C19 /* RecentsController.swift in Sources */,
+				E27854AE1C281F38003F2C19 /* TalkController.swift in Sources */,
 				E27854A91C26D7DB003F2C19 /* UIColor+Pomo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

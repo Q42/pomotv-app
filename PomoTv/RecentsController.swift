@@ -1,5 +1,5 @@
 //
-//  RecentController.swift
+//  RecentsController.swift
 //  PomoTv
 //
 //  Created by Tom Lokhorst on 2015-12-20.
@@ -10,7 +10,7 @@ import UIKit
 import MWFeedParser
 import SegueManager
 
-class RecentController: UICollectionViewController {
+class RecentsController: UICollectionViewController {
 
   private let feedParserDelegate = FeedParserDelegate()
 
@@ -53,13 +53,13 @@ class RecentController: UICollectionViewController {
 
     let item = items[indexPath.item]
 
-    segueManager.performSegue(R.segue.recentController.showTalk) { segue in
+    segueManager.performSegue(R.segue.recentsController.showTalk) { segue in
 
-      segue.destinationViewController.viewModel = TalkViewController.ViewModel(
+      segue.destinationViewController.viewModel = TalkController.ViewModel(
         title: item.title,
         speaker: item.speaker,
-        event: "Some conference",
-        date: NSDate(),
+        event: nil,
+        date: nil,
         youtubeIdentifier: item.youtubeIdentifier
       )
     }

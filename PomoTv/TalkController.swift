@@ -1,5 +1,5 @@
 //
-//  TalkViewController.swift
+//  TalkController.swift
 //  PomoTv
 //
 //  Created by Tom Lokhorst on 2015-12-21.
@@ -9,7 +9,7 @@
 import UIKit
 import youtube_ios_player_helper
 
-class TalkViewController: UIViewController {
+class TalkController: UIViewController {
 
   struct ViewModel {
     let title: String
