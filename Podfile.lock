@@ -1,14 +1,25 @@
 PODS:
+  - MWFeedParser (1.0.1):
+    - MWFeedParser/FeedParser (= 1.0.1)
+    - MWFeedParser/NSDate+InternetDateTime (= 1.0.1)
+    - MWFeedParser/NSString+HTML (= 1.0.1)
+  - MWFeedParser/FeedParser (1.0.1):
+    - MWFeedParser/NSDate+InternetDateTime
+    - MWFeedParser/NSString+HTML
+  - MWFeedParser/NSDate+InternetDateTime (1.0.1)
+  - MWFeedParser/NSString+HTML (1.0.1)
   - R.swift (1.0.0.beta.3):
     - R.swift.Library (~> 1.0.0.beta.3)
   - R.swift.Library (1.0.0.beta.3)
   - youtube-ios-player-helper (0.1.4)
 
 DEPENDENCIES:
+  - MWFeedParser
   - R.swift (= 1.0.0.beta.3)
   - youtube-ios-player-helper (= 0.1.4)
 
 SPEC CHECKSUMS:
+  MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
   R.swift: c021cc4950532a6a752ea9e033fb738c45fed8cd
   R.swift.Library: 387558da4b84db66e87ea1a6b7b35bde3fcb4730
   youtube-ios-player-helper: 84b1485ebb4b7c6b619c6e05edcb55186723a7c6
