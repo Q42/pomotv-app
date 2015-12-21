@@ -18,6 +18,8 @@
 		E27854AE1C281F38003F2C19 /* TalkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AD1C281F38003F2C19 /* TalkController.swift */; };
 		E27854B01C284EC5003F2C19 /* TalkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */; };
 		E27854B21C2850FD003F2C19 /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */; };
+		E28956831C28C46D00E088B5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28956821C28C46D00E088B5 /* Api.swift */; };
+		E28956851C28C5CA00E088B5 /* TalkCollectionViewCell+MWFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28956841C28C5CA00E088B5 /* TalkCollectionViewCell+MWFeedItem.swift */; };
 		E2F2BE941C28B5A200ACFD6C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2BE931C28B5A200ACFD6C /* SearchController.swift */; };
 		FEBF752182DCCB8780E29BC1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC24EC47D4DE24CFD71A8D1B /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		E27854AD1C281F38003F2C19 /* TalkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkController.swift; sourceTree = "<group>"; };
 		E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkCollectionViewCell.xib; sourceTree = "<group>"; };
 		E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
+		E28956821C28C46D00E088B5 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		E28956841C28C5CA00E088B5 /* TalkCollectionViewCell+MWFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TalkCollectionViewCell+MWFeedItem.swift"; sourceTree = "<group>"; };
 		E2F2BE931C28B5A200ACFD6C /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		EAADF6EF940A12AE88856F16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EC24EC47D4DE24CFD71A8D1B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,12 +96,21 @@
 		E27854931C26CC8A003F2C19 /* PomoTv */ = {
 			isa = PBXGroup;
 			children = (
+				E28956811C28C3BA00E088B5 /* Api */,
 				E27854941C26CC8A003F2C19 /* AppDelegate.swift */,
 				E2F2BE8C1C286F4400ACFD6C /* Extensions */,
 				E2F2BE8B1C286F2500ACFD6C /* Features */,
 				E2F2BE8A1C286F0100ACFD6C /* Resources */,
 			);
 			path = PomoTv;
+			sourceTree = "<group>";
+		};
+		E28956811C28C3BA00E088B5 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				E28956821C28C46D00E088B5 /* Api.swift */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 		E2F2BE8A1C286F0100ACFD6C /* Resources */ = {
@@ -145,6 +158,7 @@
 				E27854961C26CC8A003F2C19 /* RecentsController.swift */,
 				E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */,
 				E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */,
+				E28956841C28C5CA00E088B5 /* TalkCollectionViewCell+MWFeedItem.swift */,
 			);
 			name = Recents;
 			sourceTree = "<group>";
@@ -303,12 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28956831C28C46D00E088B5 /* Api.swift in Sources */,
 				E27854B21C2850FD003F2C19 /* TalkCollectionViewCell.swift in Sources */,
 				E27854991C26CC8A003F2C19 /* AboutViewController.swift in Sources */,
 				E27854951C26CC8A003F2C19 /* AppDelegate.swift in Sources */,
 				E2F2BE941C28B5A200ACFD6C /* SearchController.swift in Sources */,
 				E27854AC1C28048C003F2C19 /* R.generated.swift in Sources */,
 				E27854971C26CC8A003F2C19 /* RecentsController.swift in Sources */,
+				E28956851C28C5CA00E088B5 /* TalkCollectionViewCell+MWFeedItem.swift in Sources */,
 				E27854AE1C281F38003F2C19 /* TalkController.swift in Sources */,
 				E27854A91C26D7DB003F2C19 /* UIColor+Pomo.swift in Sources */,
 			);

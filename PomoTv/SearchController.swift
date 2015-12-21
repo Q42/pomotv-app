@@ -34,24 +34,11 @@ class SearchController: UIViewController {
     collectionView.scrollIndicatorInsets.top += searchBar.frame.height
     collectionView.contentInset.top += searchBar.frame.height
 
-    downloadFeed()
-  }
-
-  func downloadFeed() {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { [weak self] in
-
-      let delegate = FeedParserDelegate()
-      let url = NSURL(string: "http://www.pomo.tv/recent.xml")
-      let parser = MWFeedParser(feedURL: url)
-      parser.delegate = delegate
-      parser.parse()
-
-      dispatch_async(dispatch_get_main_queue()) {
-        let items = delegate.feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
-        self?.allItems = items
-        self?.items = items
-        self?.collectionView?.reloadData()
-      }
+    Api().fetchRecents { [weak self] feedItems in
+      let items = feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
+      self?.allItems = items
+      self?.items = items
+      self?.collectionView?.reloadData()
     }
   }
 
@@ -81,7 +68,6 @@ extension SearchController : UICollectionViewDelegate, UICollectionViewDataSourc
   }
 
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-
     let item = items[indexPath.item]
 
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(R.reuseIdentifier.talkCollectionViewCell, forIndexPath: indexPath)!
@@ -91,36 +77,10 @@ extension SearchController : UICollectionViewDelegate, UICollectionViewDataSourc
   }
 
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
     let item = items[indexPath.item]
 
-    segueManager.performSegue(R.segue.searchController.showTalk) { segue in
-
-      segue.destinationViewController.viewModel = TalkController.ViewModel(
-        title: item.title,
-        speaker: item.speaker,
-        event: nil,
-        date: nil,
-        youtubeIdentifier: item.youtubeIdentifier
-      )
+    segueManager.performSegue(R.segue.recentsController.showTalk) { segue in
+      segue.destinationViewController.viewModel = item.talkControllerViewModel
     }
   }
-}
-
-@objc
-private class FeedParserDelegate : NSObject, MWFeedParserDelegate {
-
-  var feedItems: [MWFeedItem] = []
-
-  @objc func feedParserDidStart(parser: MWFeedParser!) {}
-
-  @objc func feedParser(parser: MWFeedParser!, didParseFeedInfo info: MWFeedInfo!) {}
-
-  @objc func feedParser(parser: MWFeedParser!, didParseFeedItem item: MWFeedItem!) {
-    feedItems.append(item)
-  }
-
-  @objc func feedParserDidFinish(parser: MWFeedParser!) {}
-  
-  @objc func feedParser(parser: MWFeedParser!, didFailWithError error: NSError!) {}
 }

@@ -23,6 +23,16 @@ class TalkCollectionViewCell : UICollectionViewCell {
     let title: String
     let speaker: String
     let youtubeIdentifier: String
+
+    var talkControllerViewModel: TalkController.ViewModel {
+      return TalkController.ViewModel(
+        title: title,
+        speaker: speaker,
+        event: nil,
+        date: nil,
+        youtubeIdentifier: youtubeIdentifier
+      )
+    }
   }
 
   @IBOutlet weak var colorView: UIView!
