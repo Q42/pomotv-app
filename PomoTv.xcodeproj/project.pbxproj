@@ -18,6 +18,7 @@
 		E27854AE1C281F38003F2C19 /* TalkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AD1C281F38003F2C19 /* TalkController.swift */; };
 		E27854B01C284EC5003F2C19 /* TalkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */; };
 		E27854B21C2850FD003F2C19 /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */; };
+		E2F2BE941C28B5A200ACFD6C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2BE931C28B5A200ACFD6C /* SearchController.swift */; };
 		FEBF752182DCCB8780E29BC1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC24EC47D4DE24CFD71A8D1B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		E27854AD1C281F38003F2C19 /* TalkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkController.swift; sourceTree = "<group>"; };
 		E27854AF1C284EC5003F2C19 /* TalkCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkCollectionViewCell.xib; sourceTree = "<group>"; };
 		E27854B11C2850FD003F2C19 /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2F2BE931C28B5A200ACFD6C /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		EAADF6EF940A12AE88856F16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EC24EC47D4DE24CFD71A8D1B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 			children = (
 				E278549A1C26CC8A003F2C19 /* Main.storyboard */,
 				E2F2BE8D1C28731200ACFD6C /* About */,
+				E2F2BE921C28B59200ACFD6C /* Search */,
 				E2F2BE8E1C28731C00ACFD6C /* Recents */,
 				E2F2BE8F1C28734D00ACFD6C /* Talk */,
 			);
@@ -152,6 +155,14 @@
 				E27854AD1C281F38003F2C19 /* TalkController.swift */,
 			);
 			name = Talk;
+			sourceTree = "<group>";
+		};
+		E2F2BE921C28B59200ACFD6C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2BE931C28B5A200ACFD6C /* SearchController.swift */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				E27854B21C2850FD003F2C19 /* TalkCollectionViewCell.swift in Sources */,
 				E27854991C26CC8A003F2C19 /* AboutViewController.swift in Sources */,
 				E27854951C26CC8A003F2C19 /* AppDelegate.swift in Sources */,
+				E2F2BE941C28B5A200ACFD6C /* SearchController.swift in Sources */,
 				E27854AC1C28048C003F2C19 /* R.generated.swift in Sources */,
 				E27854971C26CC8A003F2C19 /* RecentsController.swift in Sources */,
 				E27854AE1C281F38003F2C19 /* TalkController.swift in Sources */,

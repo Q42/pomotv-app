@@ -184,7 +184,7 @@ https://github.com/Q42/pomotv-app</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="360"/>
+            <point key="canvasLocation" x="1562" y="1156"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -198,6 +198,7 @@ https://github.com/Q42/pomotv-app</string>
                     </tabBar>
                     <connections>
                         <segue destination="wJz-QT-io3" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Rni-Al-jQ1" kind="relationship" relationship="viewControllers" id="J7y-ME-DyX"/>
                         <segue destination="PfW-nX-96v" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
@@ -241,7 +242,79 @@ https://github.com/Q42/pomotv-app</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiC-xq-iDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="750" y="1156"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="0O0-Yt-VhI">
+            <objects>
+                <viewController id="2J2-M3-zy0" customClass="SearchController" customModule="PomoTv" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QlP-Dp-GCP"/>
+                        <viewControllerLayoutGuide type="bottom" id="8rg-7m-Ksh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fAk-NO-2dJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UWq-Rz-NP4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EiL-eT-FPP">
+                                    <size key="itemSize" width="246" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="huA-VR-mtG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UWq-Rz-NP4" secondAttribute="trailing" id="J5S-GI-Qca"/>
+                            <constraint firstItem="UWq-Rz-NP4" firstAttribute="leading" secondItem="fAk-NO-2dJ" secondAttribute="leading" id="Mm2-c4-JkO"/>
+                            <constraint firstItem="huA-VR-mtG" firstAttribute="top" secondItem="QlP-Dp-GCP" secondAttribute="bottom" id="PKs-Ij-oNU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="UWq-Rz-NP4" secondAttribute="bottom" id="Q1S-dV-k4i"/>
+                            <constraint firstAttribute="trailing" secondItem="huA-VR-mtG" secondAttribute="trailing" id="Wyw-XR-WER"/>
+                            <constraint firstItem="huA-VR-mtG" firstAttribute="leading" secondItem="fAk-NO-2dJ" secondAttribute="leading" id="b03-4T-iET"/>
+                            <constraint firstAttribute="topMargin" secondItem="UWq-Rz-NP4" secondAttribute="top" id="v3Z-1a-sLY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="6kB-Wu-YEr"/>
+                    <connections>
+                        <outlet property="collectionView" destination="UWq-Rz-NP4" id="U8Q-ia-9Ut"/>
+                        <outlet property="searchBar" destination="huA-VR-mtG" id="RrD-oa-40d"/>
+                        <segue destination="mHN-o5-8qX" kind="show" identifier="showTalk" id="TCK-9t-dic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44w-fR-wrt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="404"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8hI-U5-268">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rni-Al-jQ1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="zBh-dR-GZn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e9w-SY-DcW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2J2-M3-zy0" kind="relationship" relationship="rootViewController" id="TGu-mr-wh6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i63-Yp-tJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="404"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TCK-9t-dic"/>
+    </inferredMetricsTieBreakers>
 </document>
