@@ -28,6 +28,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="POMO.tv" id="jzE-Za-OZk"/>
+                    <connections>
+                        <segue destination="mHN-o5-8qX" kind="show" identifier="showTalk" id="nI7-gq-Uzp"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAN-BO-Alb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 let colors = [
   UIColor(hex: 0x3D576D),
@@ -31,5 +32,8 @@ class TalkCollectionViewCell : UICollectionViewCell {
     let ix = Int(arc4random_uniform(UInt32(colors.count)))
     colorView.backgroundColor = colors[ix]
     titleLabel.text = viewModel.title
+
+    let url = NSURL(string: "https://img.youtube.com/vi/\(viewModel.youtubeIdentifier)/mqdefault.jpg")!
+    imageView.af_setImageWithURL(url)
   }
 }
