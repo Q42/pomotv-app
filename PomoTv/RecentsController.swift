@@ -12,8 +12,6 @@ import SegueManager
 
 class RecentsController: UICollectionViewController {
 
-  private let feedParserDelegate = FeedParserDelegate()
-
   var items: [TalkCollectionViewCell.ViewModel] = []
 
   lazy var segueManager: SegueManager = { SegueManager(viewController: self) }()
@@ -23,12 +21,23 @@ class RecentsController: UICollectionViewController {
 
     collectionView?.registerNib(R.nib.talkCollectionViewCell)
 
-    let url = NSURL(string: "http://www.pomo.tv/recent.xml")
-    let parser = MWFeedParser(feedURL: url)
-    parser.delegate = feedParserDelegate
-    parser.parse()
+    downloadFeed()
+  }
 
-    items = feedParserDelegate.feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
+  func downloadFeed() {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { [weak self] in
+
+      let delegate = FeedParserDelegate()
+      let url = NSURL(string: "http://www.pomo.tv/recent.xml")
+      let parser = MWFeedParser(feedURL: url)
+      parser.delegate = delegate
+      parser.parse()
+
+      dispatch_async(dispatch_get_main_queue()) {
+        self?.items = delegate.feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
+        self?.collectionView?.reloadData()
+      }
+    }
   }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

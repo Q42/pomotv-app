@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 import youtube_ios_player_helper
 
 class TalkController: UIViewController {
@@ -19,6 +20,8 @@ class TalkController: UIViewController {
     let youtubeIdentifier: String
   }
 
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var playerView: YTPlayerView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var subtitleLabel: UILabel!
@@ -30,7 +33,12 @@ class TalkController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    playerView.hidden = true
+    playerView.delegate = self
     playerView.loadWithVideoId(viewModel.youtubeIdentifier, playerVars: [ "playsinline": 1 ])
+
+    let url = NSURL(string: "https://img.youtube.com/vi/\(viewModel.youtubeIdentifier)/mqdefault.jpg")!
+    imageView.af_setImageWithURL(url)
 
     self.title = viewModel.title
     titleLabel.text = viewModel.title
@@ -51,3 +59,10 @@ class TalkController: UIViewController {
   }
 }
 
+extension TalkController : YTPlayerViewDelegate {
+  func playerViewDidBecomeReady(playerView: YTPlayerView!) {
+    activityIndicator.removeFromSuperview()
+
+    playerView.hidden = false
+  }
+}
