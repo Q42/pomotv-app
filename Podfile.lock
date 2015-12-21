@@ -14,13 +14,31 @@ PODS:
   - R.swift (1.0.0.beta.3):
     - R.swift.Library (~> 1.0.0.beta.3)
   - R.swift.Library (1.0.0.beta.3)
+  - SegueManager (1.1.0):
+    - SegueManager/iOS (= 1.1.0)
+    - SegueManager/OSX (= 1.1.0)
+    - SegueManager/R.swift (= 1.1.0)
+  - SegueManager/iOS (1.1.0)
+  - SegueManager/R.swift (1.1.0):
+    - R.swift.Library
+    - SegueManager/iOS
   - youtube-ios-player-helper (0.1.4)
 
 DEPENDENCIES:
   - AlamofireImage
   - MWFeedParser
   - R.swift (= 1.0.0.beta.3)
+  - SegueManager (from `https://github.com/tomlokhorst/SegueManager.git`)
   - youtube-ios-player-helper (= 0.1.4)
+
+EXTERNAL SOURCES:
+  SegueManager:
+    :git: https://github.com/tomlokhorst/SegueManager.git
+
+CHECKOUT OPTIONS:
+  SegueManager:
+    :commit: 0bbd1326cf84b5a3bd2ecffabb0b2bdd6cea4766
+    :git: https://github.com/tomlokhorst/SegueManager.git
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
@@ -28,6 +46,7 @@ SPEC CHECKSUMS:
   MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
   R.swift: c021cc4950532a6a752ea9e033fb738c45fed8cd
   R.swift.Library: 387558da4b84db66e87ea1a6b7b35bde3fcb4730
+  SegueManager: 0d6cb1697363c3cbdece1a4812d03af1be9800f5
   youtube-ios-player-helper: 84b1485ebb4b7c6b619c6e05edcb55186723a7c6
 
 COCOAPODS: 0.39.0

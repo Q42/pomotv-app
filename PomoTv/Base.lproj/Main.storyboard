@@ -101,7 +101,10 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="dateLabel" destination="1ik-OM-D0s" id="4PR-Mv-pRc"/>
                         <outlet property="playerView" destination="8Pa-eY-MCG" id="CAL-br-icC"/>
+                        <outlet property="subtitleLabel" destination="ait-Gy-kkd" id="E33-dz-7rZ"/>
+                        <outlet property="titleLabel" destination="Xv8-3k-AGr" id="2rf-k2-04l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="al1-qT-amY" userLabel="First Responder" sceneMemberID="firstResponder"/>

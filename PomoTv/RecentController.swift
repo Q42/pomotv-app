@@ -8,12 +8,15 @@
 
 import UIKit
 import MWFeedParser
+import SegueManager
 
 class RecentController: UICollectionViewController {
 
   private let feedParserDelegate = FeedParserDelegate()
 
   var items: [TalkCollectionViewCell.ViewModel] = []
+
+  lazy var segueManager: SegueManager = { SegueManager(viewController: self) }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,6 +29,10 @@ class RecentController: UICollectionViewController {
     parser.parse()
 
     items = feedParserDelegate.feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
+  }
+
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    segueManager.prepareForSegue(segue)
   }
 
   override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,6 +48,22 @@ class RecentController: UICollectionViewController {
 
     return cell
   }
+
+  override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+
+    let item = items[indexPath.item]
+
+    segueManager.performSegue(R.segue.recentController.showTalk) { segue in
+
+      segue.destinationViewController.viewModel = TalkViewController.ViewModel(
+        title: item.title,
+        speaker: item.speaker,
+        event: "Some conference",
+        date: NSDate(),
+        youtubeIdentifier: item.youtubeIdentifier
+      )
+    }
+  }
 }
 
 extension TalkCollectionViewCell.ViewModel {
@@ -48,6 +71,7 @@ extension TalkCollectionViewCell.ViewModel {
     guard let link = item.link else { return nil }
     guard let components = NSURLComponents(string: link) else { return nil }
     guard let title = item.title else { return nil }
+    guard let author = item.author else { return nil }
 
     if components.host != "www.youtube.com" {
       print("Dropping \(item), not a youtube link")
@@ -61,6 +85,7 @@ extension TalkCollectionViewCell.ViewModel {
     }
 
     self.title = title
+    self.speaker = author
     self.youtubeIdentifier = identifier
   }
 }

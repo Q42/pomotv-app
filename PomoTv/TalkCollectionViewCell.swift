@@ -21,6 +21,7 @@ let colors = [
 class TalkCollectionViewCell : UICollectionViewCell {
   struct ViewModel {
     let title: String
+    let speaker: String
     let youtubeIdentifier: String
   }
 
