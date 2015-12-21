@@ -61,8 +61,13 @@ class TalkController: UIViewController {
 
 extension TalkController : YTPlayerViewDelegate {
   func playerViewDidBecomeReady(playerView: YTPlayerView!) {
-    activityIndicator.removeFromSuperview()
 
     playerView.hidden = false
+
+    playerView.alpha = 0
+    UIView.animateWithDuration(0.3) {
+      playerView.alpha = 1
+      self.activityIndicator.removeFromSuperview()
+    }
   }
 }
