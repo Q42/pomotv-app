@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="1562" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Talk View Controller-->
         <scene sceneID="iuy-eC-U2q">
             <objects>
-                <viewController id="mHN-o5-8qX" sceneMemberID="viewController">
+                <viewController id="mHN-o5-8qX" customClass="TalkViewController" customModule="PomoTv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TfD-gq-qix"/>
                         <viewControllerLayoutGuide type="bottom" id="dtv-4Z-Scl"/>
@@ -44,8 +44,17 @@
                     <view key="view" contentMode="scaleToFill" id="pOu-RO-aem">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pa-eY-MCG" customClass="YTPlayerView">
+                                <rect key="frame" x="20" y="72" width="295" height="271"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.74901960779999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="8Pa-eY-MCG" id="CAL-br-icC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="al1-qT-amY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

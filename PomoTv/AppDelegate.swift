@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+    // Setup default colors
+
     UINavigationBar.appearance().barTintColor = UIColor.darkTintColor()
     UINavigationBar.appearance().tintColor = UIColor.lightTintColor()
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -24,6 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITabBar.appearance().barTintColor = UIColor.darkTintColor()
     UITabBar.appearance().tintColor = UIColor.lightTintColor()
     UITabBar.appearance().translucent = false
+
+    // Setup audio session
+    do {
+      try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+    }
+    catch {
+      print("¯\\_(ツ)_/¯: \(error)")
+    }
 
     return true
   }

@@ -15,6 +15,7 @@
 		E27854A11C26CC8A003F2C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E278549F1C26CC8A003F2C19 /* LaunchScreen.storyboard */; };
 		E27854A91C26D7DB003F2C19 /* UIColor+Pomo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */; };
 		E27854AC1C28048C003F2C19 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AB1C28048C003F2C19 /* R.generated.swift */; };
+		E27854AE1C281F38003F2C19 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27854AD1C281F38003F2C19 /* TalkViewController.swift */; };
 		FEBF752182DCCB8780E29BC1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC24EC47D4DE24CFD71A8D1B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		E27854A21C26CC8A003F2C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Pomo.swift"; sourceTree = "<group>"; };
 		E27854AB1C28048C003F2C19 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		E27854AD1C281F38003F2C19 /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
 		EAADF6EF940A12AE88856F16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EC24EC47D4DE24CFD71A8D1B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,14 +86,15 @@
 		E27854931C26CC8A003F2C19 /* PomoTv */ = {
 			isa = PBXGroup;
 			children = (
-				E27854AB1C28048C003F2C19 /* R.generated.swift */,
-				E27854941C26CC8A003F2C19 /* AppDelegate.swift */,
-				E27854961C26CC8A003F2C19 /* RecentViewController.swift */,
 				E27854981C26CC8A003F2C19 /* AboutViewController.swift */,
-				E278549A1C26CC8A003F2C19 /* Main.storyboard */,
+				E27854941C26CC8A003F2C19 /* AppDelegate.swift */,
 				E278549D1C26CC8A003F2C19 /* Assets.xcassets */,
-				E278549F1C26CC8A003F2C19 /* LaunchScreen.storyboard */,
 				E27854A21C26CC8A003F2C19 /* Info.plist */,
+				E278549F1C26CC8A003F2C19 /* LaunchScreen.storyboard */,
+				E278549A1C26CC8A003F2C19 /* Main.storyboard */,
+				E27854AB1C28048C003F2C19 /* R.generated.swift */,
+				E27854961C26CC8A003F2C19 /* RecentViewController.swift */,
+				E27854AD1C281F38003F2C19 /* TalkViewController.swift */,
 				E27854A81C26D7DB003F2C19 /* UIColor+Pomo.swift */,
 			);
 			path = PomoTv;
@@ -238,6 +241,7 @@
 				E27854951C26CC8A003F2C19 /* AppDelegate.swift in Sources */,
 				E27854AC1C28048C003F2C19 /* R.generated.swift in Sources */,
 				E27854971C26CC8A003F2C19 /* RecentViewController.swift in Sources */,
+				E27854AE1C281F38003F2C19 /* TalkViewController.swift in Sources */,
 				E27854A91C26D7DB003F2C19 /* UIColor+Pomo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
