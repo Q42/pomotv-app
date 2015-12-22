@@ -18,12 +18,8 @@ let colors = [
   UIColor(hex: 0x59758E),
 ]
 
-func ==(lhs: TalkCollectionViewCell.ViewModel, rhs: TalkCollectionViewCell.ViewModel) -> Bool {
-  return lhs.youtubeIdentifier == rhs.youtubeIdentifier
-}
-
 class TalkCollectionViewCell : UICollectionViewCell {
-  struct ViewModel : Hashable {
+  struct ViewModel {
     let title: String
     let speaker: String
     let youtubeIdentifier: String
@@ -37,8 +33,6 @@ class TalkCollectionViewCell : UICollectionViewCell {
         youtubeIdentifier: youtubeIdentifier
       )
     }
-
-    var hashValue: Int { return youtubeIdentifier.hashValue }
   }
 
   @IBOutlet weak var colorView: UIView!

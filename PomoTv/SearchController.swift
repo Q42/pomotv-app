@@ -50,7 +50,7 @@ extension SearchController : UISearchBarDelegate {
 
       let allItems = feedItems.flatMap(TalkCollectionViewCell.ViewModel.init)
       let newItems = allItems.filter { vm in vm.title.lowercaseString.containsString(searchText.lowercaseString) }
-      let diff = controller.items.diff(newItems)
+      let diff = controller.items.diff(newItems, identifierSelector: { $0.youtubeIdentifier })
 
       controller.collectionView.performBatchUpdates({
         controller.items = newItems

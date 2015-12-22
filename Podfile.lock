@@ -2,7 +2,7 @@ PODS:
   - Alamofire (3.1.4)
   - AlamofireImage (2.2.0):
     - Alamofire (~> 3.1)
-  - ElementDiff (0.1.0)
+  - ElementDiff (0.2.0)
   - MWFeedParser (1.0.1):
     - MWFeedParser/FeedParser (= 1.0.1)
     - MWFeedParser/NSDate+InternetDateTime (= 1.0.1)
@@ -45,7 +45,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
   AlamofireImage: bedb8a4bdfb98eda81ba12952fba6e9e90420922
-  ElementDiff: d8967b3f6679155fc8dd022a15067ce246bfa87e
+  ElementDiff: 216e217e2483aa3b9d2ba1a50109e515c2a550a9
   MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
   R.swift: c021cc4950532a6a752ea9e033fb738c45fed8cd
   R.swift.Library: 387558da4b84db66e87ea1a6b7b35bde3fcb4730
